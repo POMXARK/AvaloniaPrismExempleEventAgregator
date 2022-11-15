@@ -3,7 +3,9 @@
         xmlns:vm="using:AvaloniaPrismExempleEventAgregator.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:view="clr-namespace:AvaloniaPrismExempleEventAgregator.Views"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+
         x:Class="AvaloniaPrismExempleEventAgregator.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="AvaloniaPrismExempleEventAgregator">
@@ -11,7 +13,10 @@
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+  
+  <StackPanel>
+        <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <view:NavigationView DataContext="{Binding NavigationViewModel}"/>
+  </StackPanel>
 
 </Window>
