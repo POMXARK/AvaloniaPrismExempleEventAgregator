@@ -5,18 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:view="clr-namespace:AvaloniaPrismExempleEventAgregator.Views"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
         x:Class="AvaloniaPrismExempleEventAgregator.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="AvaloniaPrismExempleEventAgregator">
 
-    <Design.DataContext>
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
-  
   <StackPanel>
         <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <view:NavigationView DataContext="{Binding NavigationViewModel}"/>
+        <view:NavigationView/>
   </StackPanel>
 
 </Window>

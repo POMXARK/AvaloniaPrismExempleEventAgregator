@@ -8,5 +8,6 @@ namespace AvaloniaPrismExempleEventAgregator.ViewModels
 {
     public class NavigationViewModel: INavigationViewModel
     {
+        public string NavigationGreeting => "Welcome to NavigationViewModel!";
     }
 }
